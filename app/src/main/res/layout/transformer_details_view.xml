@@ -51,7 +51,7 @@
             android:layout_height="24dp"
             android:layout_alignParentEnd="true"
             android:layout_gravity="right"
-            android:layout_marginRight="16dp"
+            android:layout_marginRight="20dp"
             android:src="@drawable/ic_delete"
             android:tint="@color/white" />
 
