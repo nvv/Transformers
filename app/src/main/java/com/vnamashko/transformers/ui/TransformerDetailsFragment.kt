@@ -85,15 +85,18 @@ class TransformerDetailsFragment : BaseFragment() {
         delete.visibility = if (model.isEdit) View.VISIBLE else View.GONE
         transformer?.id?.let { id ->
             delete.setOnClickListener {
-                disposable.add(api.delete(id)
-                        .subscribeOn(Schedulers.io())
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .compose(RxProgressDialog<Unit>(requireActivity()))
-                        .subscribe({
-                            hideSoftKeyboard()
-                            listModel.deleteTransformer(id)
-                            activity?.onBackPressed()
-                        }, { th -> handleError(th) }))
+                val builder = AlertDialog.Builder(context, R.style.AlertDialogTheme)
+                builder.setTitle(R.string.confirm)
+                    .setMessage(R.string.confirm_message)
+                    .setPositiveButton(R.string.btn_ok) { dialog, which ->
+                        run {
+                            dialog.dismiss()
+                            delete(id)
+                        }
+                    }
+                    .setNegativeButton(R.string.btn_cancel) { dialog, which -> dialog.dismiss() }
+
+                builder.create().show()
             }
         }
 
@@ -157,6 +160,19 @@ class TransformerDetailsFragment : BaseFragment() {
         save.isEnabled = isSaveEnavled
 
         name_layout.clearFocus()
+    }
+
+    private fun delete(id: String) {
+        disposable.add(api.delete(id)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .compose(RxProgressDialog<Unit>(requireActivity()))
+            .subscribe({
+                hideSoftKeyboard()
+                listModel.deleteTransformer(id)
+                activity?.onBackPressed()
+            }, { th -> handleError(th) })
+        )
     }
 
     private fun handleError(throwable: Throwable) {
