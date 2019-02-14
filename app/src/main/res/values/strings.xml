@@ -30,7 +30,7 @@
     <string name="roster">Roster</string>
     <string name="dlg_processing">Processing…</string>
 
-    <string name="list_empty_message">Add fighter for each team to emulate fight</string>
+    <string name="list_empty_message">Add fighter for each team to simulate fight</string>
     <string name="fight">Fight!</string>
     <string name="battle">Battle</string>
     <string name="vs">vs</string>
