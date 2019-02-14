@@ -11,7 +11,7 @@ import javax.inject.Singleton
  * @author Vlad Namashko
  */
 @Module
-class CoreModule(private val context: Context) {
+class CoreModule(context: Context) {
 
     private val localStorage = Storage(context)
 

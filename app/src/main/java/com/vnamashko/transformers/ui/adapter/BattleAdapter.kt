@@ -27,12 +27,12 @@ import java.util.concurrent.TimeUnit
 /**
  * @author Vlad Namashko
  */
-class BattleAdapter(val context: Context, val disposable: CompositeDisposable, val battle: Battle) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class BattleAdapter(val context: Context, disposable: CompositeDisposable, private val battle: Battle) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    val battleResults = mutableListOf<Battle.Result>()
-    var currentAutobotWins = 0
-    var currentDecepticonWins = 0
-    var totalResult: String? = null
+    private val battleResults = mutableListOf<Battle.Result>()
+    private var currentAutobotWins = 0
+    private var currentDecepticonWins = 0
+    private var totalResult: String? = null
 
     init {
         battle.simulateBattle()
