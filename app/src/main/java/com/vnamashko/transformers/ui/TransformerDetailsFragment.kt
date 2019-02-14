@@ -152,7 +152,9 @@ class TransformerDetailsFragment : BaseFragment() {
             selectTeam(TEAM_AUTOBOT, false)
         }
 
-        syncSaveEnabled(!model.transformer.name.isEmpty())
+        val isSaveEnavled = !model.transformer.name.isEmpty()
+        syncSaveEnabled(isSaveEnavled)
+        save.isEnabled = isSaveEnavled
 
         name_layout.clearFocus()
     }
