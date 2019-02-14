@@ -38,7 +38,7 @@ class BattleAdapter(val context: Context?, val disposable: CompositeDisposable, 
         battle.simulateBattle()
 
         disposable.add(Observable
-                .interval(2, TimeUnit.SECONDS)
+                .interval(1, TimeUnit.SECONDS)
                 .map { i -> battle.results[i.toInt()] }
                 .take(battle.results.size.toLong())
                 .subscribeOn(Schedulers.io())

@@ -115,6 +115,15 @@ class TransformerListAdapter(private val listener: ClickListener) : RecyclerView
             view.setOnClickListener {
 
                 view.title.visibility = View.GONE
+                view.container.postDelayed({
+                    listener.beginBattle()
+                    view.title.postDelayed({
+                        view.title.visibility = View.VISIBLE
+                    }, 1000)
+                }, 750)
+
+                // TODO: later - by some devices "endTransition" invoked before animation is finished
+                /*
                 view.container.layoutTransition.addTransitionListener(object : LayoutTransition.TransitionListener {
                     override fun startTransition(transition: LayoutTransition?, container: ViewGroup?, view: View?, transitionType: Int) {
                     }
@@ -128,7 +137,8 @@ class TransformerListAdapter(private val listener: ClickListener) : RecyclerView
                     }
 
                 })
-
+                view.title.visibility = View.GONE
+                */
             }
         }
     }
