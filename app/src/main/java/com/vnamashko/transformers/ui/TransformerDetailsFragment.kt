@@ -224,12 +224,12 @@ class TransformerDetailsFragment : BaseFragment() {
         val color = if (selectedTeam == TEAM_AUTOBOT) R.color.autobot else R.color.decepticon
 
         context?.let {
-            val colorFrom = (root.background as ColorDrawable).color
+            val colorFrom = (container.background as ColorDrawable).color
             val colorTo = ContextCompat.getColor(it, color)
             val animation = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo)
             animation.duration = BACKGROUND_TRANSITION_ANIM_DUR
             animation.addUpdateListener { animator ->
-                root.setBackgroundColor(animator.animatedValue as Int)
+                container.setBackgroundColor(animator.animatedValue as Int)
                 toolbar.setBackgroundColor(animator.animatedValue as Int)
                 activity?.window?.statusBarColor = colorTo
             }

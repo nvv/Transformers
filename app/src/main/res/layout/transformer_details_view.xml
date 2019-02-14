@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:focusableInTouchMode="true"
+    android:background="@color/autobot"
+    android:id="@+id/container"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -63,7 +65,6 @@
             android:id="@+id/root"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/autobot"
             android:clipToPadding="false"
             android:orientation="vertical"
             android:padding="16dp">
