@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit
 /**
  * @author Vlad Namashko
  */
-class BattleAdapter(val context: Context?, val disposable: CompositeDisposable, val battle: Battle) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class BattleAdapter(val context: Context, val disposable: CompositeDisposable, val battle: Battle) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     val battleResults = mutableListOf<Battle.Result>()
     var currentAutobotWins = 0
@@ -107,7 +107,7 @@ class BattleAdapter(val context: Context?, val disposable: CompositeDisposable, 
             holder.itemView.decepticon_wins.text = currentDecepticonWins.toString()
 
             totalResult?.let {
-                holder.itemView.total_result.text = context?.getString(when (totalResult) {
+                holder.itemView.total_result.text = context.getString(when (totalResult) {
                     TEAM_DECEPTICON -> R.string.result_decepticon_wins
                     TEAM_AUTOBOT -> R.string.result_autobot_wins
                     DRAW -> R.string.result_draw
@@ -144,7 +144,7 @@ class BattleAdapter(val context: Context?, val disposable: CompositeDisposable, 
         val autobotName = result.autobot.name
         val decepticonName = result.deceptiocon.name
 
-        val text = context?.getString(R.string.win_win_case, autobotName, decepticonName)
+        val text = context.getString(R.string.win_win_case, autobotName, decepticonName)
 
         val span = SpannableString(text)
         setSpan(span, R.color.autobot, autobotName)
@@ -156,7 +156,7 @@ class BattleAdapter(val context: Context?, val disposable: CompositeDisposable, 
         val autobotName = result.autobot.name
         val decepticonName = result.deceptiocon.name
 
-        val text = context?.getString(R.string.draw_case, autobotName, decepticonName)
+        val text = context.getString(R.string.draw_case, autobotName, decepticonName)
 
         val span = SpannableString(text)
         setSpan(span, R.color.autobot, autobotName)
@@ -172,7 +172,7 @@ class BattleAdapter(val context: Context?, val disposable: CompositeDisposable, 
         val name1 = if (autobotWins) result.autobot.name else result.deceptiocon.name
         val name2 = if (autobotWins) result.deceptiocon.name else result.autobot.name
 
-        val text = context?.getString(R.string.win_case, name1, name2)
+        val text = context.getString(R.string.win_case, name1, name2)
 
         val span = SpannableString(text)
         setSpan(span, R.color.autobot, autobotName)
@@ -182,9 +182,7 @@ class BattleAdapter(val context: Context?, val disposable: CompositeDisposable, 
 
     private fun setSpan(span: SpannableString, color: Int, text: String) {
         val start = span.indexOf(text)
-        context?.let {
-            span.setSpan(ForegroundColorSpan(ContextCompat.getColor(context, color)), start, start + text.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-        }
+        span.setSpan(ForegroundColorSpan(ContextCompat.getColor(context, color)), start, start + text.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
     }
 
     class HeaderViewHolder(val view: View) : RecyclerView.ViewHolder(view)

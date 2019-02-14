@@ -29,7 +29,7 @@ class BattleFragment : BaseFragment() {
         val model = ViewModelProviders.of(requireActivity()).get(TransformerListVM::class.java)
 
         view.battle_result.layoutManager = LinearLayoutManager(view.context)
-        view.battle_result.adapter = BattleAdapter(context, disposable, Battle(model.items()))
+        view.battle_result.adapter = BattleAdapter(requireActivity(), disposable, Battle(model.items()))
     }
 
 
