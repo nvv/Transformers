@@ -1,13 +1,13 @@
 package com.vnamashko.transformers.network
 
-import com.vnamashko.transformers.core.LocalStorage
+import com.vnamashko.transformers.core.Storage
 import okhttp3.Interceptor
 import okhttp3.Response
 
 /**
  * @author Vlad Namashko
  */
-class AuthInterceptor(val storage: LocalStorage) : Interceptor {
+class AuthInterceptor(val storage: Storage) : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {
         val builder = chain.request().newBuilder()

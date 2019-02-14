@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.view.View
 import com.vnamashko.transformers.core.DependencyLocator
-import com.vnamashko.transformers.core.LocalStorage
+import com.vnamashko.transformers.core.Storage
 import com.vnamashko.transformers.network.model.Transformer
 import com.vnamashko.transformers.network.service.ApiService
 import com.vnamashko.transformers.ui.BaseFragment
@@ -27,7 +27,7 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
 
     @set:Inject
-    lateinit var storage: LocalStorage
+    lateinit var storage: Storage
 
     @set:Inject
     lateinit var api: ApiService

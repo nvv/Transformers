@@ -1,7 +1,7 @@
 package com.vnamashko.transformers.network.service
 
 import com.google.gson.GsonBuilder
-import com.vnamashko.transformers.core.LocalStorage
+import com.vnamashko.transformers.core.Storage
 import com.vnamashko.transformers.network.AuthInterceptor
 import com.vnamashko.transformers.network.TransformerDeserializer
 import com.vnamashko.transformers.network.TransformerSerializer
@@ -44,7 +44,7 @@ interface ApiService {
 
         private const val BASE_URL = "https://transformers-api.firebaseapp.com/"
 
-        fun create(storage: LocalStorage): ApiService {
+        fun create(storage: Storage): ApiService {
 
             val builder = OkHttpClient.Builder().addInterceptor(AuthInterceptor(storage))
 

@@ -1,7 +1,7 @@
 package com.vnamashko.transformers.di
 
 import android.content.Context
-import com.vnamashko.transformers.core.LocalStorage
+import com.vnamashko.transformers.core.Storage
 import com.vnamashko.transformers.network.service.ApiService
 import dagger.Module
 import dagger.Provides
@@ -13,7 +13,7 @@ import javax.inject.Singleton
 @Module
 class CoreModule(private val context: Context) {
 
-    private val localStorage = LocalStorage(context)
+    private val localStorage = Storage(context)
 
     @Provides
     @Singleton
