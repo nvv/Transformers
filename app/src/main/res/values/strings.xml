@@ -41,7 +41,7 @@
     <string name="result_decepticon_wins">Team Decepticon Wins!</string>
     <string name="result_autobot_wins">Team Autobot Wins!</string>
     <string name="result_draw">Draw! No Winner Today!</string>
-    <string name="result_total_destruction">Total Destruction! Optimus Prime or Predaking have destroyed each other and everyone else!</string>
+    <string name="result_total_destruction">Total Destruction! Optimus Prime and Predaking have destroyed each other and everyone else!</string>
 
     <string name="confirm">Confirm</string>
     <string name="confirm_message">Are you sure you want to delete this Transformer?</string>
