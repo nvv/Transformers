@@ -62,6 +62,7 @@ class TransformerListAdapter(private val listener: ClickListener) : RecyclerView
                 holder.bind(item)
                 holder.view.setOnClickListener {
                     listener.onClick(item)
+                    holder.collapse()
                 }
             }
         }
@@ -94,6 +95,11 @@ class TransformerListAdapter(private val listener: ClickListener) : RecyclerView
                         if (showDetails) 180F else 0F).setDuration(ROTATION_ANIM_DURATION).start()
 
             }
+        }
+
+        fun collapse() {
+            view.skills.visibility = View.GONE
+            view.expand.rotation = 0F
         }
 
         private fun generateColor(item: Int, min: Int, max: Int) =
