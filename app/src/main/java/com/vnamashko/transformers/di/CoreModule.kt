@@ -5,7 +5,6 @@ import com.vnamashko.transformers.core.LocalStorage
 import com.vnamashko.transformers.network.service.ApiService
 import dagger.Module
 import dagger.Provides
-import dagger.android.ContributesAndroidInjector
 import javax.inject.Singleton
 
 /**

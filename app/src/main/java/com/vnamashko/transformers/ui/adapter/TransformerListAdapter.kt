@@ -1,7 +1,5 @@
 package com.vnamashko.transformers.ui.adapter
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
 import android.animation.ArgbEvaluator
 import android.animation.ObjectAnimator
 import android.support.v4.content.ContextCompat
@@ -16,9 +14,6 @@ import com.vnamashko.transformers.network.model.Transformer.Companion.TEAM_AUTOB
 import com.vnamashko.transformers.ui.view.SkillGraphView
 import kotlinx.android.synthetic.main.battle_header_list_view.view.*
 import kotlinx.android.synthetic.main.transformer_item_list_view.view.*
-import android.view.animation.AccelerateDecelerateInterpolator
-import android.animation.LayoutTransition
-import android.widget.LinearLayout
 
 
 /**

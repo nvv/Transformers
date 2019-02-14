@@ -8,7 +8,6 @@ import com.vnamashko.transformers.network.model.Transformer.Companion.TEAM_AUTOB
 import com.vnamashko.transformers.network.model.Transformer.Companion.TEAM_DECEPTICON
 import org.junit.Assert
 import org.junit.Test
-import kotlin.math.min
 
 /**
  * @author Vlad Namashko

@@ -1,9 +1,8 @@
 package com.vnamashko.transformers.ui
 
 import android.arch.lifecycle.ViewModelProviders
+import android.graphics.Rect
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
-import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -13,19 +12,16 @@ import com.vnamashko.transformers.MainActivity
 import com.vnamashko.transformers.R
 import com.vnamashko.transformers.core.DependencyLocator
 import com.vnamashko.transformers.network.model.Transformer
+import com.vnamashko.transformers.network.model.Transformers
 import com.vnamashko.transformers.network.service.ApiService
 import com.vnamashko.transformers.ui.adapter.TransformerListAdapter
+import com.vnamashko.transformers.ui.view.RxProgressDialog
+import com.vnamashko.transformers.ui.vm.TransformerListVM
+import com.vnamashko.transformers.utils.ViewUtils
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.transformer_list_view.*
 import javax.inject.Inject
-import android.graphics.Rect
-import com.vnamashko.transformers.fight.Battle
-import com.vnamashko.transformers.network.model.Transformers
-import com.vnamashko.transformers.ui.view.RxProgressDialog
-import com.vnamashko.transformers.ui.vm.TransformerDetailsVM
-import com.vnamashko.transformers.ui.vm.TransformerListVM
-import com.vnamashko.transformers.utils.ViewUtils
 
 
 /**

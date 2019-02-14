@@ -3,9 +3,6 @@ package com.vnamashko.transformers.ui.vm
 import android.arch.lifecycle.ViewModel
 import com.vnamashko.transformers.network.model.Transformer
 import io.reactivex.subjects.BehaviorSubject
-import io.reactivex.subjects.PublishSubject
-
-
 
 /**
  * @author Vlad Namashko

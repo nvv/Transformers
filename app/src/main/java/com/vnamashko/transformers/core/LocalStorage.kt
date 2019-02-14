@@ -3,7 +3,6 @@ package com.vnamashko.transformers.core
 import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
-//import com.awestruck.transformers.App
 
 /**
  * @author Vlad Namashko

@@ -1,11 +1,9 @@
 package com.vnamashko.transformers
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity;
-import android.view.Menu
+import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.view.View
 import com.vnamashko.transformers.core.DependencyLocator
@@ -20,7 +18,6 @@ import com.vnamashko.transformers.ui.view.RxProgressDialog
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 

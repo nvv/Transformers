@@ -2,7 +2,6 @@ package com.vnamashko.transformers.ui.view
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.LinearLayout
 import com.vnamashko.transformers.R
 import com.vnamashko.transformers.network.model.Transformer

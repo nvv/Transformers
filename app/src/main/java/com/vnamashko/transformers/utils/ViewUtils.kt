@@ -2,10 +2,7 @@ package com.vnamashko.transformers.utils
 
 import android.content.Context
 import android.content.res.Configuration
-import android.graphics.Point
-import android.os.Build
 import android.util.DisplayMetrics
-import android.view.Display
 import android.view.WindowManager
 
 /**
