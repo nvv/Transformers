@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    card_view:cardCornerRadius="6dp">
+
+    <LinearLayout
+        android:id="@+id/frame"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/team_logo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/team_logo_autobot_round_bg"
+                android:gravity="left"
+                android:padding="8dp"
+                android:src="@drawable/ic_autobot"
+                android:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/team_logo"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/rating_graph"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_below="@id/name"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@+id/expand"
+                android:layout_toRightOf="@+id/team_logo"/>
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/name"
+                android:layout_toLeftOf="@+id/expand"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+            <ImageView
+                android:id="@+id/expand"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_arrow_down" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/skills"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

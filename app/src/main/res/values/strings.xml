@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Transformers</string>
+    <string name="action_settings">Settings</string>
+    <string name="error_get_token">Hm… Something really strange is going on. \n\nPlease, try later. \n\nApplication will be closed.</string>
+    <string name="btn_ok">OK</string>
+    <string name="create_transformer">New Transformer</string>
+    <string name="edit_transformer">Edit Transformer</string>
+    <string name="name">Name</string>
+    <string name="save">Save</string>
+
+    <string name="team">Team %s</string>
+    <string name="decepticons">Decepticons</string>
+    <string name="autobots">Autobots</string>
+
+    <string name="strength">Strength</string>
+    <string name="intelligence">Intelligence</string>
+    <string name="speed">Speed</string>
+    <string name="endurance">Endurance</string>
+    <string name="rank">Rank</string>
+    <string name="courage">Courage</string>
+    <string name="firepower">Firepower</string>
+    <string name="skill">Skill</string>
+    <string name="err">Unknown</string>
+
+    <string name="error">Error</string>
+    <string name="error_edit_item">Ooopss… Something really strange is going on. \n\nPlease, try later.</string>
+
+    <string name="roster">Roster</string>
+    <string name="dlg_processing">Processing…</string>
+
+    <string name="list_empty_message">Add fighter for each team to emulate fight</string>
+    <string name="fight">Fight!</string>
+    <string name="battle">Battle</string>
+    <string name="vs">vs</string>
+    <string name="win_win_case">%s and %s destroyed each other and everyone else!</string>
+    <string name="draw_case">%s and %s destroyed each other</string>
+    <string name="win_case">%s has destroyed %s</string>
+
+    <string name="result_decepticon_wins">Team Decepticon Wins!</string>
+    <string name="result_autobot_wins">Team Autobot Wins!</string>
+    <string name="result_draw">Draw! No Winner Today!</string>
+    <string name="result_total_destruction">Total Destruction! Optimus Prime or Predaking have destroyed each other and everyone else!</string>
+
+
+</resources>
